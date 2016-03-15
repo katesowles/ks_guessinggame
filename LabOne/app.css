@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dddddd;
+}
+
+header {
+  padding: 20px 30%;
+  background-color: #333333;
+  margin-bottom: 30px;
+}
+section {
+  width: 40%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'playfair display', Times, serif;
+  font-style: italic;
+  font-size: 40px;
+  color: #eeeeee;
+  text-align: center;
+}
+p {
+  margin-bottom: 10px;
+}
