@@ -22,8 +22,8 @@ if (userName.length >= 10) {
   console.log(userName + ' is their birth name?:' + userBirthName);
   //question one and a half
   var userNickname = prompt('Well then, how about a nickname or a super secret spy nickname that you like to go by? Give me something here, I\'ll ever be able to remember your full name.');
-  Nickname.textContent = userName + 'has a nickname of ' + userNickname;
-  console.log(userName + 'has a nickname of ' + userNickname)
+  Nickname.textContent = userName + ' has a nickname of ' + userNickname;
+  console.log(userName + ' has a nickname of ' + userNickname)
   //question one and three quarters
   var userPreference = confirm('Alright then, ' + userName + ', how about we refer to you by that nickname, capische?');
   Preference.textContent = userName + ' approves of us using this nickname to address them?: ' + userPreference;
@@ -50,17 +50,17 @@ if (userOrigin === false) {
 }
 
 //question four
-var userWander = confirm(userBirthCity + ' Huh, that\'s pretty sweet. Were you eager to get out of there when you were a kid?');
+var userWander = confirm(userBirthCity + ' huh? That\'s pretty sweet. Were you eager to get out of there when you were a kid?');
 Wander.textContent = userName + ' was eager to leave ' + userBirthCity + '?: ' + userWander;
 console.log(userName + ' was eager to leave?: ' + userWander);
 
 //question five
-var userGrownUp = prompt('Nice, nice. I was THE MOST EAGER to get out of my hometown backin the day. Speaking of back in the day, what did you want to be when you grew up?');
-GrownUp.textContent = userName + ' wanted to be a/an' + userGrownUp + ' when they were a kid';
-console.log(userName + ' wanted to be a/an' + userGrownUp + ' when they were a kid');
+var userGrownUp = prompt('Nice, nice. I was THE MOST EAGER to get out of my hometown back in the day. Speaking of back in the day, what did you want to be when you grew up?');
+GrownUp.textContent = userName + ' wanted to be a/an ' + userGrownUp + ' when they were a kid';
+console.log(userName + ' wanted to be a/an ' + userGrownUp + ' when they were a kid');
 
 //question six
-var userAchieved = confirm('You wanted to ' + userGrownUp + ', huh? So is that what you became? Did your dreams come true?!');
+var userAchieved = confirm('You wanted to ' + userGrownUp + ', huh? So is that what you ended up doing? Did your dreams come true?!');
 Achieved.textContent = userName + ' achieved their dream of being ' + userGrownUp + '?: ' + userAchieved;
 console.log(userName + ' achieved their dream of being ' + userGrownUp + '?: ' + userAchieved);
 if (userAchieved === false) {
