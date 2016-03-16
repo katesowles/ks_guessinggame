@@ -6,9 +6,7 @@ var noCorrect     = 'You answered "No", that is correct!';
 var noIncorrect   = 'You answered "No", that is incorrect.';
 var pointsResults = document.getElementById('pointsResults');
 
-
 //question one
-var pointsOne = 0;
 var earnedOne = 0;
 while (questionOne !== yes && questionOne !== no) {
   var questionOne = prompt('Was Kate born in Portland? Please answer with YES or NO.').toLowerCase();
@@ -27,7 +25,6 @@ else if (questionOne === no) {
 }
 
 //question two
-var pointsTwo = 0;
 var earnedTwo = 0;
 while (questionTwo !== yes && questionTwo !== no) {
   var questionTwo = prompt('Does Kate have a large grey cat? Please answer with YES or NO.').toLowerCase();
@@ -46,7 +43,6 @@ else if (questionTwo === no) {
 }
 
 //question three
-var pointsThree = 0;
 var earnedThree = 0;
 while (questionThree !== yes && questionThree !== no) {
   var questionThree = prompt('Did Kate study Photography in college? Please answer with YES or NO.').toLowerCase();
@@ -65,7 +61,6 @@ else if (questionThree === no) {
 }
 
 //question four
-var pointsFour = 0;
 var earnedFour = 0;
 while (questionFour !== yes && questionFour !== no) {
   var questionFour = prompt('Does Kate live in Portland currently? Please answer with YES or NO.').toLowerCase();
@@ -77,7 +72,6 @@ while (questionFour !== yes && questionFour !== no) {
 if (questionFour === yes) {
   answerFour.textContent = yesIncorrect;
   earnedFour = 0;
-
 }
 else if (questionFour === no) {
   answerFour.textContent = noCorrect;
@@ -85,7 +79,6 @@ else if (questionFour === no) {
 }
 
 //question five
-var pointsFive = 0;
 var earnedFive = 0;
 while (questionFive !== yes && questionFive !== no) {
   var questionFive = prompt('Is Kate the youngest of three girls? Please answer with YES or NO.').toLowerCase();
@@ -105,7 +98,6 @@ else if (questionFive === no) {
 
 //question six
 //add a question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user multiple opportunities to get the correct answer.
-var pointsSix = 0;
 var earnedSix = 0;
 var isCorrect = false;
 for (i = 0; i < 3 && !isCorrect; i++) {
@@ -142,14 +134,7 @@ for (i = 0; i < 3 && !isCorrect; i++) {
   }
 }
 
-//question seven
-// As a developer, I want to add a 5th question that accepts multiple possible correct answers that are stored in an array.
-// var pointsSeven = 0;
-// var earnedSeven = 0;
-
-// As a developer, I want to refactor my JS code to make it more D.R.Y. (don't repeat yourself)
-
 //count up them points!
 console.log(earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive + earnedSix)
-var resultsTotal = earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive + earnedSix /*+ earnedSeven*/;
+var resultsTotal = earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive + earnedSix;
 pointsResults.textContent = resultsTotal;
