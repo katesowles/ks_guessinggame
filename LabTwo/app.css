@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", Times, serif;
+}
+
+header, footer {
+  background-color: #333333;
+  padding: 20px 20%;
+  color: white;
+}
+
+section {
+
+}
+
+article {
+  padding: 10px 0;
+  background-color: #dddddd;
+}
+
+article:nth-child(even) {
+  background-color: white;
+}
+
+h1 {
+  font-size: 55px;
+  color: white;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 16px;
+}
