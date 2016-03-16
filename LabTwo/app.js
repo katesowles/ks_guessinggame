@@ -1,28 +1,15 @@
-var answerOne   = document.getElementById('answerOne');
-var answerTwo   = document.getElementById('answerTwo');
-var answerThree = document.getElementById('answerThree');
-var answerFour  = document.getElementById('answerFour');
-var answerFive  = document.getElementById('answerFive');
-var pointsResults = document.getElementById('pointsResults');
-
-var earnedOne;
-var earnedTwo;
-var earnedThree;
-var earnedFour;
-var earnedFive;
-
-var yes = 'yes'
-var no  = 'no'
-
+var yes           = 'yes';
+var no            = 'no';
 var yesCorrect    = 'You answered "Yes", that is correct!';
 var yesIncorrect  = 'You answered "Yes", that is incorrect.';
 var noCorrect     = 'You answered "No", that is correct!';
 var noIncorrect   = 'You answered "No", that is incorrect.';
+var pointsResults = document.getElementById('pointsResults');
 
-var pointsCorrect   = 1;
-var pointsIncorrect = 0;
 
 //question one
+var pointsOne = 0;
+var earnedOne = 0;
 while (questionOne !== yes && questionOne !== no) {
   var questionOne = prompt('Was Kate born in Portland? Please answer with YES or NO.').toLowerCase();
   //user's answer
@@ -32,16 +19,16 @@ while (questionOne !== yes && questionOne !== no) {
 }
 if (questionOne === yes) {
   answerOne.textContent = yesCorrect;
-  pointsOne.textContent = pointsCorrect;
-  earnedOne = pointsCorrect;
+  earnedOne = 1;
 }
 else if (questionOne === no) {
   answerOne.textContent = noIncorrect;
-  pointsOne.textContent = pointsIncorrect;
-  earnedOne = pointsIncorrect;
+  earnedOne = 0;
 }
 
 //question two
+var pointsTwo = 0;
+var earnedTwo = 0;
 while (questionTwo !== yes && questionTwo !== no) {
   var questionTwo = prompt('Does Kate have a large grey cat? Please answer with YES or NO.').toLowerCase();
   //user's answer
@@ -51,16 +38,16 @@ while (questionTwo !== yes && questionTwo !== no) {
 }
 if (questionTwo === yes) {
   answerTwo.textContent = yesIncorrect;
-  pointsTwo.textContent = pointsIncorrect;
-  earnedTwo = pointsIncorrect;
+  earnedTwo = 0;
 }
 else if (questionTwo === no) {
   answerTwo.textContent = noCorrect;
-  pointsTwo.textContent = pointsCorrect;
-   earnedTwo = pointsCorrect;
+   earnedTwo = 1;
 }
 
 //question three
+var pointsThree = 0;
+var earnedThree = 0;
 while (questionThree !== yes && questionThree !== no) {
   var questionThree = prompt('Did Kate study Photography in college? Please answer with YES or NO.').toLowerCase();
   //user's answer
@@ -70,16 +57,16 @@ while (questionThree !== yes && questionThree !== no) {
 }
 if (questionThree === yes) {
   answerThree.textContent = yesCorrect;
-  pointsThree.textContent = pointsCorrect;
-   earnedThree = pointsCorrect;
+   earnedThree = 1;
 }
 else if (questionThree === no) {
   answerThree.textContent = noIncorrect;
-  pointsThree.textContent = pointsIncorrect;
-  earnedThree = pointsIncorrect;
+  earnedThree = 0;
 }
 
 //question four
+var pointsFour = 0;
+var earnedFour = 0;
 while (questionFour !== yes && questionFour !== no) {
   var questionFour = prompt('Does Kate live in Portland currently? Please answer with YES or NO.').toLowerCase();
   //user's answer
@@ -89,17 +76,17 @@ while (questionFour !== yes && questionFour !== no) {
 }
 if (questionFour === yes) {
   answerFour.textContent = yesIncorrect;
-  pointsFour.textContent = pointsIncorrect;
-  earnedFour = pointsIncorrect;
+  earnedFour = 0;
 
 }
 else if (questionFour === no) {
   answerFour.textContent = noCorrect;
-  pointsFour.textContent = pointsCorrect;
-  earnedFour = pointsCorrect;
+  earnedFour = 1;
 }
 
 //question five
+var pointsFive = 0;
+var earnedFive = 0;
 while (questionFive !== yes && questionFive !== no) {
   var questionFive = prompt('Is Kate the youngest of three girls? Please answer with YES or NO.').toLowerCase();
   //user's answer
@@ -109,29 +96,60 @@ while (questionFive !== yes && questionFive !== no) {
 }
 if (questionFive === yes) {
   answerFive.textContent = yesIncorrect;
-  pointsFive.textContent = pointsIncorrect;
-  earnedFive = pointsIncorrect;
+  earnedFive = 0;
 }
 else if (questionFive === no) {
   answerFive.textContent = noCorrect;
-  pointsFive.textContent = pointsCorrect;
-  earnedFive = pointsCorrect;
+  earnedFive = 1;
 }
 
-//count up them points!
-console.log(earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive)
-var resultsTotal = earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive;
-pointsResults.textContent = resultsTotal;
+//question six
+//add a question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user multiple opportunities to get the correct answer.
+var pointsSix = 0;
+var earnedSix = 0;
+var isCorrect = false;
+for (i = 0; i < 3 && !isCorrect; i++) {
+  var questionSix = prompt('How old is Kate? Please answer with a whole number.');
+  //user's answer
+  console.log('Q6: How old is Kate? ' + questionSix);
+  //this is the correct answer
+  console.log(questionSix === 27);
+  switch(true) {
+   case questionSix > 25 && questionSix < 30:
+     answerSix.textContent = 'You answered ' + questionSix + '. That\'s close enough, a lady never reveals her age.';
+     isCorrect = true;
+     earnedSix = 1;
+   break;
+   case questionSix <= 24 || questionSix >= 30:
+     answerSix.textContent = 'Thank you, I guess?';
+     earnedSix = 0;
+   break;
+   case questionSix <= 20 || questionSix >= 35:
+     answerSix.textContent = 'Yeah...no.';
+     earnedSix = 0;
+   break;
+   case questionSix <= 15 || questionSix >= 40:
+     answerSix.textContent = 'That\'s just rude.';
+     earnedSix = 0;
+   break;
+   case isNaN:
+     answerSix.textContent = 'Nooooo...';
+     earnedSix = 0;
+   default:
+     answerSix.textContent = 'Really?!';
+     earnedSix = 0;
+     break;
+  }
+}
 
-//REQUIREMENTS
-//DONE - Create a new branch (call it 'day2' or 'about-me' or some other meaningful name) in the repo you created for labwork.
-//DONE - Write clean HTML and JavaScript -- use correct indentation and syntax.
-//DONE - Make sure your one of your three guessing game questions accept user input that is either y/n or yes/no, with either .toUpperCase() or .toLowerCase() used to validate user input.
-//DONE - Useful and descriptive console.log messages are well written and correctly displaying to the browser console for each question of the guessing game.
-//DONE - Add, Commit, Push process is being followed; evident in GitHub that commits are made regularly, and with good commit messages.
-
-//STRETCH GOALS, 1pt each
-// As a developer, I want to add a 4th question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user multiple opportunities to get the correct answer.
+//question seven
 // As a developer, I want to add a 5th question that accepts multiple possible correct answers that are stored in an array.
-// As a developer, I want to refactor my JS code to make it more D.R.Y.
-// As a developer, I want to keep a tally of correct answers given by the user, and at the end of the game, tell them how well they did, e.g. "You got 4 out of 5 questions correct! Good job!"
+// var pointsSeven = 0;
+// var earnedSeven = 0;
+
+// As a developer, I want to refactor my JS code to make it more D.R.Y. (don't repeat yourself)
+
+//count up them points!
+console.log(earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive + earnedSix)
+var resultsTotal = earnedOne + earnedTwo + earnedThree + earnedFour + earnedFive + earnedSix /*+ earnedSeven*/;
+pointsResults.textContent = resultsTotal;
