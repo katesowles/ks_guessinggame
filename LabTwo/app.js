@@ -186,58 +186,60 @@ for (i = 0; i < 4 && !sixIsCorrect; i++) {
 console.log('score after Q6: ' + score);
 
 //question seven
+var sevenTotal = document.getElementById('sevenTotal');
+var seven = 0;
 var cities = ['portland', 'vancouver', 'beaverton', 'st. helens', 'saint helens', 'deer island', 'goble'];
 for (i = 0; i < 5; i++) {
   var questionSeven = prompt('Alright ' + userName + ', here\'s a tricky one: Name as many of the cities/towns that Kate has lived in as possible. You have five tries to name as many as you can. Please answer city names only, no state names required').toLowerCase();
   //user's answer
   console.log('Q7: Cities/towns that Kate has lived in? ' + questionSeven);
-  console.log(questionSeven);
   switch(questionSeven) {
   case cities[0]:
-   answerSeven.textContent = 'You answered ' + cities[0] + ', that\'s correct!';
    console.log(cities[0]);
    score++
-   alert('Great work! Correct!');
+   seven++
+   alert('You answered ' + cities[0] + ', that\'s correct!');
   break;
   case cities[1]:
-   answerSeven.textContent = 'You answered ' + cities[1] + ', that\'s correct!';
    console.log(cities[1]);
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[1] + ', that\'s correct!');
   break;
   case cities[2]:
-   answerSeven.textContent = 'You answered ' + cities[2] + ', that\'s correct!';
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[2] + ', that\'s correct!');
   break;
   case cities[3]:
-   answerSeven.textContent = 'You answered ' + cities[3] + ', that\'s correct!';
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[3] + ', that\'s correct!');
   break;
   case cities[4]:
-   answerSeven.textContent = 'You answered ' + cities[4] + ', that\'s correct!';
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[4] + ', that\'s correct!');
   break;
   case cities[5]:
-   answerSeven.textContent = 'You answered ' + cities[5] + ', that\'s correct!';
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[5] + ', that\'s correct!');
   break;
   case cities[6]:
-   answerSeven.textContent = 'You answered ' + cities[6] + ', that\'s correct!';
    score++
-   alert('Correct!');
+   seven++
+   alert('You answered ' + cities[6] + ', that\'s correct!');
   break;
   default:
-   answerSeven.textContent = 'Not in this lifetime.';
-   alert('Nope.');
+   alert('Not in this lifetime.');
    break;
   }
   console.log('score after most recent attempt: ' + score);
 }
 console.log('score after Q7: ' + score);
+
+sevenTotal.textContent = seven ;
 
 //count up them points!
 console.log('total score: ' + score)
