@@ -1,16 +1,3 @@
-/*
-DAY ONE REQUIREMENTS
-  - As an eventual jobseeker, I would like for potential employers to quickly learn a few things about me, such as a short bio, my education, an overview of my job experience, and my goals.
-
-DAY TWO REQUIREMENTS
-   - As a developer, I want to convert some of my appropriate biographical elements into unordered lists, such as my education summary and/or my work experience.
-   - As a prospective job seeker, I want to make myself more personable by adding a Top Ten list to the bottom of my About Me page with an ordered list in HTML, for instance, my Top Ten Favorite Movies or my Top Ten Places I Want to Visit, or something along those lines.
-   - As a developer, I want to use CSS to add some color to my About Me page, by changing the background color of the page to something besides white, then making all the header elements one color, the paragraph elements a different color, and lists yet a different color.
-
-DAY TWO STRETCH GOALS
-   - As a developer, I want to make my code more DRY by putting all of the questions, answers, and responses to my guessing game into arrays (or even one huge multidimensional array), and modifying the game logic such that a 'for' loop will control the flow from question to question. (This will take some planning... here's a hint on how to approach it!)
-*/
-
 var yes           = 'yes';
 var no            = 'no';
 var yesCorrect    = 'You answered "Yes", that is correct!';

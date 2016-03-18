@@ -10,48 +10,84 @@ body {
   padding: 50px 0;
 }
 
+#wrapper {
+  min-width: 400px;
+}
+
 nav {
   position: fixed;
   top: 0px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(50,50,50,0.9);
   width: 100%;
   padding: 20px;
+  text-align: center;
+  font-family: Abel, Helvetica, Arial, sans-serif;
 }
 
-nav ul {
-}
-
-nav li {
-  display: inline;
-}
-
-nav li a {
-  color: white;
+nav a {
+  color: #ccc;;
   text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:last-child {
+  margin: 0;
+}
+
+.active {
+  color: white;
 }
 
 header, footer {
   background-color: #333333;
-  padding: 20px 20%;
+  text-align: center;
   color: white;
+  padding: 40px 0;
+}
+
+section {
+  background-color: #dddddd;
 }
 
 article {
+  width: ;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.list {
+  width: 40%;
+}
+
+.list:first-child {
+  padding-bottom: 0;
+}
+
+.question {
   padding: 10px 0;
   background-color: #dddddd;
   border-bottom: 1px solid #bbb;
 }
 
-h1 {
-  font-size: 55px;
-  color: white;
-  text-align: center;
+footer {
+  padding: 50px;
+  background-color: #333;
+}
+
+.buttonBar {
+  margin: 0 auto;
+  width: 250px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   text-align: center;
-  min-width: 400px;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 55px;
+  color: white;
 }
 
 h3 {
@@ -62,4 +98,34 @@ h3 {
 h4 {
   font-size: 16px;
   color: #777777;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.5em;
+  font-family: Abel, Helvetica, Arial, sans-serif;
+  text-align: justify;
+  font-size: 22px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.btn a:link, .btn a:visited {
+  text-decoration: none;
+  color: #ccc;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.btn a:hover, .btn a:active {
+  color: white;
+}
+
+li {
+  color: #666666;
 }

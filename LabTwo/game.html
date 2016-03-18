@@ -4,62 +4,61 @@
     <meta charset="utf-8">
     <title>About Kate</title>
     <link href="app.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic,700,900,900italic' rel='stylesheet' type='text/css'>
 
     <link href="app.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="game.html">Game</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="game.html" class="active">Game</a>
     </nav>
     <div id="wrapper">
       <header>
         <h1>About Kate</h1>
       </header>
       <section>
-        <article id="articleOne">
+        <div class="question">
           <h3>Was Kate born in Portland?</h3>
           <h4 id="answerOne">Yes or No?</h4>
-        </article>
+        </div>
 
-        <article id="articleTwo">
+        <div class="question">
           <h3>Does Kate have a large grey cat?</h3>
           <h4 id="answerTwo">Yes or No?</h4>
-        </article>
+        </div>
 
-        <article id="articleThree">
+        <div class="question">
           <h3>Did Kate study graphic design in college?</h3>
           <h4 id="answerThree">Yes or No?</h4>
-        </article>
+        </div>
 
-        <article id="articleFour">
+        <div class="question">
           <h3>Does Kate live within Portland city limits currently?</h3>
           <h4 id="answerFour">Yes or No?</h4>
-        </article>
+        </div>
 
-        <article id="articleFive">
+        <div class="question">
           <h3>Is Kate the youngest of three girls?</h3>
           <h4 id="answerFive">Yes or No?</h4>
-        </article>
+        </div>
 
-        <article id="articleSix">
+        <div class="question">
           <h3>How old is Kate?</h3>
           <h4 id="answerSix">Enter a whole number.</h4>
-        </article>
+        </div>
 
-        <article id="articleSeven">
+        <div class="question">
           <h3>Name as many cities as you can that Kate has lived in.</h3>
           <h4 id="answerSeven">You got <span id="sevenTotal">0</span> out of 5  correct!</h4>
-        </article>
+        </div>
       </section>
       <footer id="Results">
         <h3>You got <span id="pointsResults">0</span> out of 11 correct!</h3>
       </footer>
     </div>
-    <!-- <script src="app.js" type="text/javascript"></script> -->
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
