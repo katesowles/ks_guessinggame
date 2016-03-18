@@ -5,6 +5,7 @@ var yesIncorrect  = 'You answered "Yes", that is incorrect.';
 var noCorrect     = 'You answered "No", that is correct!';
 var noIncorrect   = 'You answered "No", that is incorrect.';
 var pointsResults = document.getElementById('pointsResults');
+
 var score         = 0;
 
 var userName = prompt('Before we get started, what is your first name?');
