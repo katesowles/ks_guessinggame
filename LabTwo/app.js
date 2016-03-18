@@ -13,7 +13,7 @@ function ask(htmlResponseId, questionText, answerKey) {
   var askQ = prompt(questionText).toLowerCase();
   var correct       = 'You anwered ' + askQ + ' that is correct';
   var incorrect     = 'You ansered ' + askQ + ' that is incorrect';
-  console.log("user ansered: " + askQ);
+  console.log("user answered: " + askQ);
   var responseTag = document.getElementById(htmlResponseId);
   if (answerKey == askQ) {
     score++;
@@ -47,30 +47,31 @@ for (i = 0; i < 4 && !sixIsCorrect; i++) {
   switch(true) {
    case questionSix > 25 && questionSix < 30:
      answerSix.textContent = 'You answered ' + questionSix + '. That\'s close enough, a lady never reveals her age.';
+     alert('You answered ' + questionSix + '. That\'s close enough, a lady never reveals her age.');
      sixIsCorrect = true;
      console.log(sixIsCorrect === true);
      score++
-     alert('Great work! Correct!');
      questionSix = true;
    break;
    case questionSix <= 24 || questionSix >= 30:
      answerSix.textContent = 'Thank you, I guess?';
-     alert('Eh, not quite. You got that one wrong.');
+     alert('Thank you, I guess?');
    break;
    case questionSix <= 20 || questionSix >= 35:
      answerSix.textContent = 'Yeah...no.';
-     alert('Eh, not quite. You got that one wrong.');
+     alert('Yeah...no.');
    break;
    case questionSix <= 15 || questionSix >= 40:
      answerSix.textContent = 'That\'s just rude.';
-     alert('Eh, not quite. You got that one wrong.');
+     alert('That\'s just rude.');
    break;
    case isNaN:
      answerSix.textContent = 'Nooooo...';
-     alert('Eh, not quite. You got that one wrong.');
+     alert('Nooooo...');
+     break;
    default:
      answerSix.textContent = 'Really?!';
-     alert('Eh, not quite. You got that one wrong.');
+     alert('Really?!');
      break;
   }
 }
