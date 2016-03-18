@@ -68,7 +68,7 @@ for (i = 0; i < 4 && !sixIsCorrect; i++) {
    default:
      answerSix.textContent = 'Really?!';
      alert('Really?!');
-     break;
+   break;
   }
 }
 console.log('score after Q6: ' + score);
