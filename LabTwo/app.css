@@ -56,6 +56,11 @@ article {
   padding: 50px;
 }
 
+.intro {
+  width: 50%;
+  max-width: 900px;
+}
+
 .list {
   width: 40%;
 }
@@ -100,12 +105,23 @@ h4 {
   color: #777777;
 }
 
-p {
-  margin-bottom: 20px;
+p, li {
   line-height: 1.5em;
   font-family: Abel, Helvetica, Arial, sans-serif;
   text-align: justify;
   font-size: 22px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+li {
+  color: #666666;
 }
 
 .btn {
@@ -124,8 +140,4 @@ p {
 
 .btn a:hover, .btn a:active {
   color: white;
-}
-
-li {
-  color: #666666;
 }
