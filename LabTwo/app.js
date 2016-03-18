@@ -11,8 +11,8 @@ var answerKey = ["yes", "no", "yes", "no", "no"];
 
 function ask(htmlResponseId, questionText, answerKey) {
   var askQ = prompt(questionText).toLowerCase();
-  var correct       = 'You anwered ' + askQ + ' that is correct';
-  var incorrect     = 'You ansered ' + askQ + ' that is incorrect';
+  var correct       = 'You anwered ' + askQ + ', that is correct';
+  var incorrect     = 'You ansered ' + askQ + ', that is incorrect';
   console.log("user answered: " + askQ);
   var responseTag = document.getElementById(htmlResponseId);
   if (answerKey == askQ) {
@@ -53,22 +53,18 @@ for (i = 0; i < 4 && !sixIsCorrect; i++) {
      score++
      questionSix = true;
    break;
-   case questionSix <= 24 || questionSix >= 30:
+   case questionSix <= 24 && questionSix >= 30:
      answerSix.textContent = 'Thank you, I guess?';
      alert('Thank you, I guess?');
    break;
-   case questionSix <= 20 || questionSix >= 35:
+   case questionSix >= 20 && questionSix <= 35:
      answerSix.textContent = 'Yeah...no.';
      alert('Yeah...no.');
    break;
-   case questionSix <= 15 || questionSix >= 40:
+   case questionSix >= 15 && questionSix <= 40:
      answerSix.textContent = 'That\'s just rude.';
      alert('That\'s just rude.');
    break;
-   case isNaN:
-     answerSix.textContent = 'Nooooo...';
-     alert('Nooooo...');
-     break;
    default:
      answerSix.textContent = 'Really?!';
      alert('Really?!');
