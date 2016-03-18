@@ -1,39 +1,10 @@
 /*
-DAY ONE TECHNICAL REQUIREMENTS
-X - Create a new branch (call it 'day2' or 'about-me' or some other meaningful name) in the repo you created for labwork.
-X - Write clean HTML and JavaScript -- use correct indentation and syntax.
-X - Make sure your one of your three guessing game questions accept user input that is either y/n or yes/no, with either .toUpperCase() or .toLowerCase() used to validate user input.
-X - Useful and descriptive console.log messages are well written and correctly displaying to the browser console for each question of the guessing game.
-X - Add, Commit, Push process is being followed; evident in GitHub that commits are made regularly, and with good commit messages.
-
-DAY ONE USER STORIES
-X - As a student, I want to create an About Me page as a demonstration of my skills with HTML.
-X - As an eventual jobseeker, I want to get practice in creating a portfolio page so that I can make myself appealing to potential employers.
-X - As a fun-loving human being, I want to give the visitors to my profile page a guessing game that shows how fun-loving and interesting I am, and maybe include things about myself that would not ordinarily appear in a portfolio page.
-X - As a developer, I want to use markup to structure my index.html page, so the layout is in the order of assembly I prefer, with effective use of the markup possibilities offered by HTML.
-X - As a developer, I want to carefully design my scripts, so I can understand how to organize and write my code to achieve my goals in interactivity.
-X - As a developer, I want to create a simple script for my index.html page using JavaScript, so that I can use the browser to send a response to the user
-X - As a developer, I want to provide three (3) questions to the user, so that they can guess the answers and get to know me.
-X - As a developer, I want to be able to debug my code by using well structured console messages.
-X - As a developer, I want to manage my code through an online version control system, so I have the ability to work with others, manage my revisions, and keep a thorough record of my progress.
-X - As a developer, I want to receive and use the user's name, so that the program is personalized to their experience.
-X - As a developer, I want to notify the user after each question, so they are aware whether they were correct or not in their answers.
+DAY ONE REQUIREMENTS
   - As an eventual jobseeker, I would like for potential employers to quickly learn a few things about me, such as a short bio, my education, an overview of my job experience, and my goals.
 
-DAY ONE STRETCH GOALS
-X - As a developer, I want to add a 4th question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user multiple opportunities to get the correct answer.
-X - As a developer, I want to keep a tally of correct answers given by the user, and at the end of the game, tell them how well they did, e.g. "You got 4 out of 5 questions correct! Good job!"
-   - As a developer, I want to add a 5th question that accepts multiple possible correct answers that are stored in an array.
-   - As a developer, I want to refactor my JS code to make it more D.R.Y.
-
 DAY TWO REQUIREMENTS
-X - As a prospective jobseeker, I want to use a tasteful color scheme that demonstrates my sensibility toward design plus provides readable contrast between the text and the background.
-   - As a developer, to keep my work organized, I want to make a new Git branch for today's work (say, 'day-4'), make some changes and git a-c-p. Then I want to create a new branch and add one question, then merge that branches into my 'day-4' branch.
    - As a developer, I want to convert some of my appropriate biographical elements into unordered lists, such as my education summary and/or my work experience.
    - As a prospective job seeker, I want to make myself more personable by adding a Top Ten list to the bottom of my About Me page with an ordered list in HTML, for instance, my Top Ten Favorite Movies or my Top Ten Places I Want to Visit, or something along those lines.
-   - As a developer, I want to add a 4th question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer. I will use the isNan() function to ensure that the user is providing valid numeric input.
-   - As a developer, I want to add a 5th question to my guessing game that accepts multiple possible correct answers that are stored in an array, for instance, "Can you guess a state that I have lived in besides Washington?"
-   - As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell them how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. "You got 4 out of 5 questions correct, Bobbi! You can do even better next time."
    - As a developer, I want to use CSS to add some color to my About Me page, by changing the background color of the page to something besides white, then making all the header elements one color, the paragraph elements a different color, and lists yet a different color.
 
 DAY TWO STRETCH GOALS
