@@ -1,109 +1,41 @@
-var yes           = 'yes';
-var no            = 'no';
-var yesCorrect    = 'You answered "Yes", that is correct!';
-var yesIncorrect  = 'You answered "Yes", that is incorrect.';
-var noCorrect     = 'You answered "No", that is correct!';
-var noIncorrect   = 'You answered "No", that is incorrect.';
 var pointsResults = document.getElementById('pointsResults');
-
 var score         = 0;
 
 var userName = prompt('Before we get started, what is your first name?');
 console.log('User\'s name is ' + userName);
-//question one
-while (questionOne !== yes && questionOne !== no) {
-  var questionOne = prompt('Hey ' + userName + ', can you guess whether or not Kate was born in Portland? Please answer with YES or NO.').toLowerCase();
-  //user's answer
-  console.log('Q1: Was Kate born in Portland? ' + questionOne);
-  //this is the correct answer
-  console.log(questionOne === yes)
-}
-if (questionOne === yes) {
-  answerOne.textContent = yesCorrect;
-  score++
-  alert('Great work! Correct!');
-}
-else if (questionOne === no) {
-  answerOne.textContent = noIncorrect;
-  alert('Eh, not quite. You got that one wrong.');
-}
-console.log('score after Q1: ' + score);
 
-//question two
-while (questionTwo !== yes && questionTwo !== no) {
-  var questionTwo = prompt('Alright alright, ' + userName + ' can you guess whether or not Kate has a large grey cat? Please answer with YES or NO.').toLowerCase();
-  //user's answer
-  console.log('Q2: Does Kate have a large grey cat? ' + questionTwo);
-  //this is the correct answer
-  console.log(questionTwo === no)
-}
-if (questionTwo === yes) {
-  answerTwo.textContent = yesIncorrect;
-  alert('Eh, not quite. You got that one wrong.');
-}
-else if (questionTwo === no) {
-  answerTwo.textContent = noCorrect;
-   score++
-   alert('Great work! Correct!');
-}
-console.log('score after Q2: ' + score);
+//question one though five - refactored
+var htmlResponseId = ['answerOne', 'answerTwo', 'answerThree', 'answerFour', 'answerFive'];
+var questionText   = ['Was Kate born in Portland?', 'Does Kate have a large grey cat?', 'Did Kate study graphic design in college?', 'Does Kate live within Portland city limits currently?', 'Is Kate the youngest of three girls?'];
+var answerKey = ["yes", "no", "yes", "no", "no"];
 
-//question three
-while (questionThree !== yes && questionThree !== no) {
-  var questionThree = prompt('Cruising right along there ' + userName + ', can you guess whether or not Kate studied graphic design in college? Please answer with YES or NO.').toLowerCase();
-  //user's answer
-  console.log('Q3: Did Kate study graphic design in college? ' + questionThree);
-  //this is the correct answer
-  console.log(questionThree === yes);
+function ask(htmlResponseId, questionText, answerKey) {
+  var askQ = prompt(questionText).toLowerCase();
+  var correct       = 'You anwered ' + askQ + ' that is correct';
+  var incorrect     = 'You ansered ' + askQ + ' that is incorrect';
+  console.log("user ansered: " + askQ);
+  var responseTag = document.getElementById(htmlResponseId);
+  if (answerKey == askQ) {
+    score++;
+    alert(correct);
+    console.log("correct!");
+    responseTag.textContent =  correct;
+  } else if (askQ !== answerKey) {
+    score += 0;
+    alert(incorrect);
+    console.log("incorrect!");
+    responseTag.textContent = incorrect;
+  } else if (askQ !== "yes" && askQ !== "no") {
+    score +=0;
+    alert("you didn't answer yes or no");
+  }
+  console.log(score);
 }
-if (questionThree === yes) {
-  answerThree.textContent = yesCorrect;
-   score++
-   alert('Great work! Correct!');
+for (var i = 0; i < 5; i++) {
+  ask(htmlResponseId[i], questionText[i], answerKey[i]);
 }
-else if (questionThree === no) {
-  answerThree.textContent = noIncorrect;
-  alert('Eh, not quite. You got that one wrong.');
-}
-console.log('score after Q3: ' + score);
-
-//question four
-while (questionFour !== yes && questionFour !== no) {
-  var questionFour = prompt('Alright ' + userName + ', here\'s a tricky one: Does Kate live in Portland currently? Please answer with YES or NO.').toLowerCase();
-  //user's answer
-  console.log('Q4: Does Kate live in Portland currently? ' + questionFour);
-  //this is the correct answer
-  console.log(questionFour === no);
-}
-if (questionFour === yes) {
-  answerFour.textContent = yesIncorrect;
-  alert('Eh, not quite. You got that one wrong.');
-}
-else if (questionFour === no) {
-  answerFour.textContent = noCorrect;
-  score++
-  alert('Great work! Correct!');
-}
-console.log('score after Q4: ' + score);
-
-//question five
-while (questionFive !== yes && questionFive !== no) {
-  var questionFive = prompt('Not too shabby so far, and we\'re getting close to the end, ' + userName + '. Is Kate the youngest of three girls? Please answer with YES or NO.').toLowerCase();
-  //user's answer
-  console.log('Q5: Is Kate the youngest of three girls? ' + questionFive);
-  //this is the correct answer
-  console.log(questionFive === no);
-}
-if (questionFive === yes) {
-  answerFive.textContent = yesIncorrect;
-  alert('Eh, not quite. You got that one wrong.');
-}
-else if (questionFive === no) {
-  answerFive.textContent = noCorrect;
-  score++
-  alert('Great work! Correct!');
-}
-console.log('score after Q5: ' + score);
+console.log('total score: ' + score)
+pointsResults.textContent = score ;
 
 //question six
 //add a question to my guessing game that takes numeric input, and indicates to the user whether the guess is 'too high' or 'too low', and gives the user multiple opportunities to get the correct answer.

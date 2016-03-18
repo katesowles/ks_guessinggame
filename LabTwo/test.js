@@ -1,9 +1,4 @@
-var score = 0;
 
-var pointsResults = document.getElementById('pointsResults');
-
-var userName = prompt('Before we get started, what is your first name?');
-console.log('User\'s name is ' + userName);
 
 //testing fucntion refactor
 
@@ -36,7 +31,6 @@ function ask(htmlResponseId, questionText, answerKey) {
 for (var i = 0; i < 5; i++) {
   ask(htmlResponseId[i], questionText[i], answerKey[i]);
 }
-
 console.log('total score: ' + score)
 pointsResults.textContent = score ;
 
